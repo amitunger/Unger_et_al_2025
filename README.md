@@ -12,9 +12,9 @@ This folder contains all raw and processed data files used for statistical analy
 | `all_yearly_mean_juvenile.csv` | Averaged yearly survival data of juveniles across treatments |
 | `all_yearly_mean_larvae.csv` | Averaged yearly data on larval success across treatments |
 | `blood_flow.csv` | Blood flow reversal time measurements across treatments |
-| `larvae_figure.csv` | Data specifically prepared for plotting larval success figures |
+| `larvae_figure.csv` | Raw data specifically for plotting Figure 3 |
 | `larvae_results.csv` | Processed results of larval success analyses |
-| `survival_percentage.csv` | Percent survival of juveniles across treatments |
+| `survival_percentage.csv` | Percent survival of juveniles across treatments for Figure 1 |
 | `survival_results.csv` | Processed results of juvenile survival analyses |
 
 ---
