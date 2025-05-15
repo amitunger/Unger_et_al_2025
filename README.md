@@ -3,22 +3,6 @@ This repository contains raw data and R code used in the manuscript:
 **"Climate Change Resilience in *Phallusia nigra*: A Comparative Study of Native and Introduced Populations"**
 
 ## Repository Structure
-
-### `data/`  
-This folder contains all raw and processed data files used for statistical analyses and figure generation.
-
-| Filename | Description |
-|----------|-------------|
-| `all_yearly_mean_juvenile.csv` | Averaged yearly survival data of juveniles across treatments |
-| `all_yearly_mean_larvae.csv` | Averaged yearly data on larval success across treatments |
-| `blood_flow.csv` | Blood flow reversal time measurements across treatments |
-| `larvae_figure.csv` | Raw data specifically for plotting Figure 3 |
-| `larvae_results.csv` | Processed results of larval success analyses |
-| `survival_percentage.csv` | Percent survival of juveniles across treatments for Figure 1 |
-| `survival_results.csv` | Processed results of juvenile survival analyses |
-
----
-
 ### `code/`  
 This folder contains all R scripts for analyses and figure generation. The script numbering corresponds to the order of sections and figures in the manuscript.
 
@@ -31,6 +15,20 @@ This folder contains all R scripts for analyses and figure generation. The scrip
 | `5-distribution maps.R` | Species distribution modeling using GAMs and environmental layers <br> (includes code for **Figures 4–6**) |
 | `Figures_1_2.R` | Code for generating Figures 1 and 2 (juvenile survival and blood flow) |
 | `Figure_3.R` | Code for generating Figure 3 (larval success) |
+
+---
+### `data/`  
+This folder contains all raw and processed data files used for statistical analyses and figure generation.
+
+| Filename | Description |
+|----------|-------------|
+| `all_yearly_mean_juvenile.csv` | Averaged yearly survival data of juveniles across treatments |
+| `all_yearly_mean_larvae.csv` | Averaged yearly data on larval success across treatments |
+| `blood_flow.csv` | Blood flow reversal time measurements across treatments |
+| `larvae_figure.csv` | Raw data specifically for plotting Figure 3 |
+| `larvae_results.csv` | Processed results of larval success analyses |
+| `survival_percentage.csv` | Percent survival of juveniles across treatments for Figure 1 |
+| `survival_results.csv` | Processed results of juvenile survival analyses |
 
 ---
 
