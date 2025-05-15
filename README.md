@@ -17,18 +17,18 @@ This folder contains all R scripts for analyses and figure generation. The scrip
 | `Figure_3.R` | Code for generating Figure 3 (larval success) |
 
 ---
-### `data/`  
-This folder contains all raw and processed data files used for statistical analyses and figure generation.
+## `data/`
 
-| Filename | Description |
-|----------|-------------|
-| `all_yearly_mean_juvenile.csv` | Averaged yearly survival data of juveniles across treatments |
-| `all_yearly_mean_larvae.csv` | Averaged yearly data on larval success across treatments |
-| `blood_flow.csv` | Blood flow reversal time measurements across treatments |
-| `larvae_figure.csv` | Raw data specifically for plotting Figure 3 |
-| `larvae_results.csv` | Processed results of larval success analyses |
-| `survival_percentage.csv` | Percent survival of juveniles across treatments for Figure 1 |
-| `survival_results.csv` | Processed results of juvenile survival analyses |
+| File Name                     | Description                                                                 | Columns Description |
+|------------------------------|-----------------------------------------------------------------------------|---------------------|
+| `survival_results.csv`       | Raw survival data for juvenile *P. nigra* under stress conditions.          | - `number`: ID of individual<br>- `temperature`: Treatment temperature (16/25/31)<br>- `salinity`: Treatment salinity (28/31/35/40/43)<br>- `day`: Day of death<br>- `event`: 1 = died, 0 = survived until day 28<br>- `origin`: Population origin (Mediterranean Sea/Red Sea/Singapore)<br>- `aquaria`: Aquaria number per treatment |
+| `survival_percentage.csv`    | Percent survival data by treatment and population.                          | - Same columns as above, plus:<br>- `survival`: Percentage of juveniles alive |
+| `blood_flow.csv`             | Blood flow recovery time measurements under stress.                         | - `plate`: Petri dish ID<br>- `number`: ID of individual<br>- `temperature`: Treatment temperature (16/25/31)<br>- `salinity`: Treatment salinity (28/31/35/40/43)<br>- `day`: Experimental day (measured weekly)<br>- `time`: Time (seconds) to reverse blood flow<br>- `origin`: Population origin (Mediterranean Sea/Red Sea/Singapore) |
+| `larvae_results.csv`         | Raw fertilization and development results of larvae.                        | - `Temperature`: Treatment temperature (16/25/31)<br>- `Salinity`: Treatment salinity (28/31/35/40/43)<br>- `Origin`: Population origin (Mediterranean Sea/Red Sea/Singapore)<br>- `Plate`: Plate ID (6 per treatment)<br>- `Success`: 0 = unsuccessful (not fertilized/undeveloped/dead), 1 = successful (fully developed/settled) |
+| `larvae_figure.csv`          | Subset of larvae data used for figure generation.                           | - Same columns as `larvae_results.csv` |
+| `all_yearly_mean_juvenile.csv` | Yearly mean survival per treatment and origin.                            | - Summarized version of juvenile survival data<br>- Likely includes `temperature`, `salinity`, `origin`, and mean survival values |
+| `all_yearly_mean_larvae.csv`   | Yearly mean larval success per treatment and origin.                      | - Summarized version of larval data<br>- Likely includes `Temperature`, `Salinity`, `Origin`, and mean `Success` |
+
 
 ---
 
