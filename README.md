@@ -1,62 +1,86 @@
-# Unger_et_al_2025
+## Description
 This repository contains raw data and R code used in the manuscript:  
-"Climate Change Resilience in Phallusia nigra: A Comparative Study of Native and Introduced Populations"
+**"Climate Change Resilience in *Phallusia nigra*: A Comparative Study of Native and Introduced Populations"**
 
-# Contents
-- `data`: Raw data used for statistical analysis and figures. 
-   Sheets include: juveniles, juveniles (%), blood flow, larvae.
-	columns explanation of sheets 'juveniles', 'juveniles (%)':
-		"number"- id of individuals in survival measurements 
-		"temperature"- temperature of treatment (16/25/31)
-		"salinity"- salinity of treatment (28/31/35/40/43)			
-		"day"- day of death
-		"event"- 1 if died, 0 if stayed alive till day 28 of experiment 		
-		"origin"- population origin (Mediterranean Sea/Red Sea/Singapore)
-		"aquaria"- aquaria number of individual, each treatment had its own aquaria
-		"survival"- percentage of juveniles alive 
-	columns explanation of sheet 'blood flow':
-		"plate"- Petri dish the individual was on
-		"number"- id of individuals measured
-		"temperature"- temperature of treatment (16/25/31)
-		"salinity"- salinity of treatment (28/31/35/40/43)			
-		"day"- day of experiment (was measured weekly)
-		"time"- seconds it took to reverse the blood flow
-		"origin"- population origin (Mediterranean Sea/Red Sea/Singapore)
-	columns explanation of sheet 'larvae':
-		"Temperature"- temperature of treatment (16/25/31)
-		"Salinity"- salinity of treatment (28/31/35/40/43)			
-		"Origin"- population origin (Mediterranean Sea/Red Sea/Singapore)
-		"Plate"- number of plate oocytes were in (6 per treatment) 
-		"Success"- 0 for non-fertilized eggs, undeveloped larvae, and dead larvae. 1 for larvae reaching the fully developed or settled stage 
+---
 
+## Contents
 
-- `code`: Contains the R script for all figures, statistics and species distribution model. 
-   sections include:
-	Fig. 1
-	Fig. 2
-	Fig. 3
-Stress experiment on P. nigra juveniles- 
-	Kaplan-Meir survival analysis with log-rank tests
-	General Linear Model (GLM) with negative binomial regresssion
-	Poisson GLM for all populations blood flow 
-	Linear Mixed-Effects Model (LMM) for Singapore 
+### `data/`
+Raw data used for statistical analysis and figures.  
 
-Stress experiment on P. nigra's reproduction products-
-	GLM for each population
+#### Sheets include:
+- **juveniles** / **juveniles (%)**  
+  Columns:
+  - `number`: ID of individuals in survival measurements  
+  - `temperature`: Temperature of treatment (16 / 25 / 31 °C)  
+  - `salinity`: Salinity of treatment (28 / 31 / 35 / 40 / 43 PSU)  
+  - `day`: Day of death  
+  - `event`: 1 if died, 0 if alive at day 28  
+  - `origin`: Population origin (Mediterranean Sea / Red Sea / Singapore)  
+  - `aquaria`: Aquaria number per treatment  
+  - `survival`: Percentage of juveniles alive  
 
-Potential distribution of P. nigra under a global change scenario-
-	Creation of maps with ocean conditions 
-	Generalized Additive Models (gam) for survival predictions
-	Fig. 4-6- maps with P. nigra distribution predictions for present and change in future
+- **blood flow**  
+  Columns:
+  - `plate`: Petri dish ID  
+  - `number`: ID of individuals measured  
+  - `temperature`: Treatment temperature  
+  - `salinity`: Treatment salinity  
+  - `day`: Day of experiment (weekly measurements)  
+  - `time`: Time in seconds to reverse blood flow  
+  - `origin`: Population origin  
 
-# How to Use
-Open the `code.R` file in R. 
-Modify file paths and names where needed. 
-Run each section separately.
+- **larvae**  
+  Columns:
+  - `Temperature`: Treatment temperature  
+  - `Salinity`: Treatment salinity  
+  - `Origin`: Population origin  
+  - `Plate`: Plate ID (6 per treatment)  
+  - `Success`: 0 = failed (unfertilized/dead); 1 = fully developed/settled  
 
-# Requirements
-- R version 4.2.2
-- R packages: readxl, ggplot2, tidyverse, dplyr, tidyr, scales, survival, MASS, performance, lme4, emmeans, lmerTest, car, stats, ResourceSelection, raster, lubridate, data.table, mgcv, maps, virdis. 
+---
 
-# Contact
+### `code/`
+R script for all figures, statistical models, and species distribution modeling.
+
+#### Sections:
+
+- **Figure 1**: Survival rates of juveniles  
+- **Figure 2**: Blood flow stress response  
+- **Figure 3**: Larval success rates  
+
+**Stress experiments on juveniles**:
+- Kaplan-Meier survival analysis with log-rank tests  
+- Generalized Linear Model (GLM) with negative binomial regression  
+- Poisson GLM for all populations (blood flow)  
+- Linear Mixed-Effects Model (LMM) for Singapore population  
+
+**Stress experiments on reproductive products**:
+- GLM for each population  
+
+**Species Distribution Modeling**:
+- Mapping of ocean conditions  
+- Generalized Additive Models (GAMs) for survival predictions  
+- **Figures 4–6**: Predicted present and future distributions of *P. nigra*  
+
+---
+
+## How to Use
+
+1. Open the `code.R` file in RStudio or R.
+2. Modify file paths and filenames to match your local setup.
+3. Run each section separately for corresponding results and figures.
+
+---
+
+## Requirements
+
+- **R version**: 4.2.2  
+- **R packages**:  
+  `readxl`, `ggplot2`, `tidyverse`, `dplyr`, `tidyr`, `scales`, `survival`, `MASS`, `performance`, `lme4`, `emmeans`, `lmerTest`, `car`, `stats`, `ResourceSelection`, `raster`, `lubridate`, `data.table`, `mgcv`, `maps`, `viridis`
+
+---
+
+## Contact
 Amit Unger - amitunger@mail.tau.ac.il
